@@ -119,11 +119,11 @@ var PlaylistTable = React.createClass({
               <tr>
                 <th style={{width: "30px"}}></th>
                 <th>Name</th>
-                <th style={{width: "150px"}}>Owner</th>
-                <th style={{width: "100px"}}>Tracks</th>
-                <th style={{width: "120px"}}>Public?</th>
-                <th style={{width: "120px"}}>Collaborative?</th>
-                <th style={{width: "100px"}} className="text-right"><button className="btn btn-default btn-xs" type="submit" onClick={this.exportPlaylists}><span className="fa fa-file-archive-o"></span> Export All</button></th>
+                <th style={{width: "150px"}}>Dueño</th>
+                <th style={{width: "100px"}}>Canciones</th>
+                <th style={{width: "120px"}}>Pública?</th>
+                <th style={{width: "120px"}}>Colaborativa?</th>
+                <th style={{width: "100px"}} className="text-right"><button className="btn btn-default btn-xs" type="submit" onClick={this.exportPlaylists}><span className="fa fa-file-archive-o"></span> Seleccionar Todas</button></th>
               </tr>
             </thead>
             <tbody>
@@ -182,7 +182,7 @@ var PlaylistRow = React.createClass({
         <td>{playlist.tracks.total}</td>
         <td>{this.renderTickCross(playlist.public)}</td>
         <td>{this.renderTickCross(playlist.collaborative)}</td>
-        <td className="text-right"><button className="btn btn-default btn-xs btn-success" type="submit" onClick={this.exportPlaylist}><span className="glyphicon glyphicon-save"></span> Export</button></td>
+        <td className="text-right"><button className="btn btn-default btn-xs btn-success" type="submit" onClick={this.exportPlaylist}><span className="glyphicon glyphicon-save"></span> Seleccionar</button></td>
       </tr>
     );
   }
